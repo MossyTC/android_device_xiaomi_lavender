@@ -7,7 +7,7 @@
 # Inherit from sdm660-common
 include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/clover
+DEVICE_PATH := device/xiaomi/lavender
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -24,7 +24,7 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
 
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
-TARGET_KERNEL_CONFIG := clover_defconfig
+TARGET_KERNEL_CONFIG := lavender_defconfig
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -50,4 +50,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Inherit the proprietary files
-include vendor/xiaomi/clover/BoardConfigVendor.mk
+include vendor/xiaomi/lavender/BoardConfigVendor.mk

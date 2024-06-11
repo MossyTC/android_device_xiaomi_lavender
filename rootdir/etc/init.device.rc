@@ -96,8 +96,8 @@ on boot
     setprop persist.radio.multisim.config "ssss"
 
     # Camera ID
-    setprop persist.vendor.camera.exif.model "Mi PAD 4"
-    setprop persist.sys.exif.model "Mi PAD 4"
+    setprop persist.vendor.camera.exif.model "Redmi Note 7"
+    setprop persist.sys.exif.model "Redmi Note 7"
 
 on post-fs-data
     mkdir /persist/qti_fp 0700 system system

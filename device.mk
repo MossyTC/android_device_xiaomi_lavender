@@ -14,9 +14,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/clover/clover-vendor.mk)
+$(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
-DEVICE_PATH := device/xiaomi/clover
+DEVICE_PATH := device/xiaomi/lavender
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
@@ -71,4 +71,4 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    CloverWifiOverlay
+    LavenderWifiOverlay

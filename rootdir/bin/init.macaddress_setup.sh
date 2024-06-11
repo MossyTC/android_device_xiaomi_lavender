@@ -27,7 +27,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-CLOVERMAC=/mnt/vendor/persist/wlan_mac.clover
+LAVENDERMAC=/mnt/vendor/persist/wlan_mac.lavender
 WLAN_MAC_BIN=/mnt/vendor/persist/wlan_mac.bin
 MACADDRESSBIN=/mnt/vendor/persist/wlan_bt/wlan.mac
 INTFSTR0="Intf0MacAddress="
@@ -38,7 +38,7 @@ get_mac () {
     realMac=$(printf "%b"  | od -An -t x1 -w6 -N6  $MACADDRESSBIN | tr -d '\n ')
   else
     if [ -f $WLAN_MAC_BIN ]; then
-        checkMac=$(printf "%b"  | od -An -t x1 -w6 -N6  $CLOVERMAC | tr -d '\n ')
+        checkMac=$(printf "%b"  | od -An -t x1 -w6 -N6  $LAVENDERMAC | tr -d '\n ')
         if [ $checkMac != $MAC0 ] && [ "${checkMac:0:2}" != "49" ]; then
           realMac=$checkMac
         fi
@@ -49,18 +49,18 @@ get_mac () {
 }
 
 wlan_mac () {
-    wlanMac=$(head -n 1 $CLOVERMAC)
+    wlanMac=$(head -n 1 $LAVENDERMAC)
     wlanMac=$(echo -e "${wlanMac//$INTFSTR0}")
 }
 
 write_mac () {
-        echo -e  "$INTFSTR0""$realMac" >$CLOVERMAC
-        echo -e  "END">>$CLOVERMAC
-        chown wifi $CLOVERMAC
-        chgrp wifi $CLOVERMAC
+        echo -e  "$INTFSTR0""$realMac" >$LAVENDERMAC
+        echo -e  "END">>$LAVENDERMAC
+        chown wifi $LAVENDERMAC
+        chgrp wifi $LAVENDERMAC
 }
 
-if [ -f $CLOVERMAC ]; then
+if [ -f $LAVENDERMAC ]; then
     get_mac
     wlan_mac
     if [ "${realMac:0:6}" == "${wlanMac:0:6}" ] && [ "${wlanMac:0:2}" != "49" ]; then

@@ -1,26 +1,27 @@
-The MI PAD 4 (codenamed _"clover"_) are high-end mid-range tablet from Xiaomi.
-
-Xiaomi MI PAD 4 was announced and released in June 2018.
+The Xiaomi Redmi Note 7 (codenamed _"lavender"_) is a mid-range smartphone from Xiaomi announced in January 2019.
 
 ## Device specifications
 
-| Device       | Xiaomi MI PAD 4 / Xiaomi MI PAD 4 PLUS          |
-| -----------: | :---------------------------------------------- |
-| SoC          | Qualcomm SDM660 Snapdragon 660                  |
-| CPU          | 8x Qualcomm® Kryo™ 260 up to 2.2GHz             |
-| GPU          | Adreno 512                                      |
-| Memory       | 3GB / 4GM RAM (LPDDR4X)                         |
-| Shipped Android version | 8.1.0                           	 |
-| Storage      | 64GB eMMC 5.1 flash storage                     |
-| Battery      | Non-removable Li-Po 6000 mAh                    |
-| Dimensions   | 200.2 x 120.3 x 7.9 mm                          |
-| Display      | 1920 x 1200 (16:10), 8.0 inch  or 10.1 inch     |
-| Rear camera | 13MP, f/2.0 1080p 30 fps video|
-| Front camera | 5MP, f/2.0|
+| Device                  | Xiaomi Redmi Note 7                                         |
+| ----------------------- | :---------------------------------------------------------- |
+| SoC                     | Qualcomm SDM660 Snapdragon 660                              |
+| CPU                     | 8x Qualcomm® Kryo™ 260 CPU up to 1.8GHz                     |
+| GPU                     | Adreno 512                                                  |
+| Memory                  | 3GB / 4GB / 6GB RAM (LPDDR4X)                               |
+| Shipped Android version | 9                                                           |
+| Storage                 | 32 / 64 / 128GB eMMC 5.1 flash storage                      |
+| MicroSD                 | Up to 256 GB                                                |
+| Battery                 | Non-removable Li-Po 4000 mAh                                |
+| Dimensions              | 159.21 x 75.21 x 8.1 mm                                     |
+| Display                 | 2340 x 1080 (19:5:9), 6.3 inch                              |
+| Rear camera 1           | 48 MP, f/1.8, (wide), 1/2", 0.8µm, PDAF (Indian/Global)     |
+| Rear camera 2           | 2 MP, f/2.4, depth sensor or 5 MP, f/2.2, depth sensor      |
+| Front camera            | 13 MP, f/2.0, 1.12µm                                        |
+
 
 ## Device picture
 
-![Xiaomi MI PAD 4](http://i8.mifile.cn/a1/pms_1529843020.73617168!560x560.jpg)
+![Xiaomi Redmi Note 7](https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note7/gallery1-2.jpg)
 
 ***
 
@@ -30,13 +31,13 @@ Create '.repo/local_manifests/roomservice.xml' with the following content:
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-20" />
+  <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-21" />
 
-  <project name="kyasu/android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="github" revision="lineage-20" />
-  <project name="kyasu/android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="github" revision="lineage-20" />
-  <project name="kyasu/android_device_xiaomi_clover" path="device/xiaomi/clover" remote="github" revision="lineage-20" />
-  <project name="kyasu/android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="github" revision="lineage-20" />
-  <project name="kyasu/android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="github" revision="lineage-20" />
+  <project name="MossyTC/android_kernel_xiaomi_sdm660" path="kernel/xiaomi/sdm660" remote="github" revision="lineage-21" />
+  <project name="MossyTC/android_device_xiaomi_sdm660-common" path="device/xiaomi/sdm660-common" remote="github" revision="lineage-21" />
+  <project name="MossyTC/android_device_xiaomi_lavender" path="device/xiaomi/lavender" remote="github" revision="lineage-21" />
+  <project name="MossyTC/android_vendor_xiaomi_sdm660-common" path="vendor/xiaomi/sdm660-common" remote="github" revision="lineage-21" />
+  <project name="MossyTC/android_vendor_xiaomi_lavender" path="vendor/xiaomi/lavender" remote="github" revision="lineage-21" />
 
 </manifest>
 ```
